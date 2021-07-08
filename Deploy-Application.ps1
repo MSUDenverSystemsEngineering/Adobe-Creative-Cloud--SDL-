@@ -127,7 +127,7 @@ Try {
 		Show-InstallationProgress
 
 		## <Perform Pre-Installation tasks here>
-
+		Remove-MSIApplications -Name 'Adobe'
 
 		##*===============================================
 		##* INSTALLATION
