@@ -179,7 +179,7 @@ Try {
 		Show-InstallationProgress
 
 		## <Perform Pre-Uninstallation tasks here>
-
+		Execute-MSI -Action Uninstall -Path "$dirFiles\build\TDX18027069 - CVA Interns (SDL).msi" -PassThru
 
 		##*===============================================
 		##* UNINSTALLATION
