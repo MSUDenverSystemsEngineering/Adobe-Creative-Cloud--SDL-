@@ -127,7 +127,6 @@ Try {
 		Show-InstallationProgress
 
 		## <Perform Pre-Installation tasks here>
-		Execute-MSI -Action Uninstall -Path "$dirFiles\build\TDX18027069 - CVA Interns (SDL).msi" -PassThru -ContinueOnError
 
 		##*===============================================
 		##* INSTALLATION
