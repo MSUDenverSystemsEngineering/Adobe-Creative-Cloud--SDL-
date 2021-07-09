@@ -179,7 +179,6 @@ Try {
 		Show-InstallationProgress
 
 		## <Perform Pre-Uninstallation tasks here>
-		Execute-MSI -Action Uninstall -Path "$dirFiles\build\TDX18027069 - CVA Interns (SDL).msi" -PassThru
 
 		##*===============================================
 		##* UNINSTALLATION
@@ -193,8 +192,7 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
-		$exitCode = Execute-Process -Path "$envProgramFilesX86\Adobe\Adobe Creative Cloud\Utils\Creative Cloud Uninstaller.exe" -Parameters "-u" -WindowStyle "Hidden" -IgnoreExitCodes '33,135' -PassThru
-		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
+		Execute-MSI -Action Uninstall -Path "$dirFiles\build\TDX18027069 - CVA Interns (SDL).msi" -PassThru
 
 		##*===============================================
 		##* POST-UNINSTALLATION
